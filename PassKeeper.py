@@ -4,9 +4,9 @@ from tkinter import messagebox
 import tkinter.messagebox
 import tkinter.ttk
 
-# ****** GLOBAL VARIABLES ******
 
-objects = []
+cos = []
+
 window = Tk()
 window.withdraw()
 window.title('Przechowalnia')
@@ -31,9 +31,9 @@ class Logowanie(object):
 
     def wejdz(self):
         self.value = self.entry.get()
-        access = 'bombel'
+        haslo = 'okoń'
 
-        if self.value == access:
+        if self.value == haslo:
             self.loop = True
             self.top.destroy()
             window.deiconify()
@@ -59,28 +59,28 @@ class JuzDodawanie:
         e = self.email
         p = self.password
 
-        encryptedN = ""
-        encryptedE = ""
-        encryptedP = ""
+        wez_n = ""
+        wez_e = ""
+        wez_p = ""
         for letter in n:
             if letter == ' ':
-                encryptedN += ' '
+                wez_n += ' '
             else:
-                encryptedN += chr(ord(letter) + 5)
+                wez_n += chr(ord(letter) + 5)
 
         for letter in e:
             if letter == ' ':
-                encryptedE += ' '
+                wez_e += ' '
             else:
-                encryptedE += chr(ord(letter) + 5)
+                wez_e += chr(ord(letter) + 5)
 
         for letter in p:
             if letter == ' ':
-                encryptedP += ' '
+                wez_p += ' '
             else:
-                encryptedP += chr(ord(letter) + 5)
+                wez_p += chr(ord(letter) + 5)
 
-        f.write(encryptedN + ',' + encryptedE + ',' + encryptedP + ', \n')
+        f.write(wez_n + ',' + wez_e + ',' + wez_p + ', \n')
         f.close()
 
 
@@ -93,81 +93,81 @@ class JuzDysponowanie:
         self.window = master
         self.i = i
 
-        dencryptedN = ""
-        dencryptedE = ""
-        dencryptedP = ""
+        daj_n = ""
+        daj_e = ""
+        daj_p = ""
         for letter in self.name:
             if letter == ' ':
-                dencryptedN += ' '
+                daj_n += ' '
             else:
-                dencryptedN += chr(ord(letter) - 5)
+                daj_n += chr(ord(letter) - 5)
 
         for letter in self.email:
             if letter == ' ':
-                dencryptedE += ' '
+                daj_e += ' '
             else:
-                dencryptedE += chr(ord(letter) - 5)
+                daj_e += chr(ord(letter) - 5)
 
         for letter in self.password:
             if letter == ' ':
-                dencryptedP += ' '
+                daj_p += ' '
             else:
-                dencryptedP += chr(ord(letter) - 5)
+                daj_p += chr(ord(letter) - 5)
 
-        self.label_name = Label(self.window, text=dencryptedN, font=('Courier', 14))
-        self.label_email = Label(self.window, text=dencryptedE, font=('Courier', 14))
-        self.label_pass = Label(self.window, text=dencryptedP, font=('Courier', 14))
-        self.deleteButton = Button(self.window, text='X', fg='red', command=self.delete)
+        self.label_nazwa = Label(self.window, text=daj_n, font=('Courier', 14))
+        self.label_email = Label(self.window, text=daj_e, font=('Courier', 14))
+        self.label_pass = Label(self.window, text=daj_p, font=('Courier', 14))
+        self.button_usun = Button(self.window, text='X', fg='red', command=self.usun)
 
     def display(self):
-        self.label_name.grid(row=6 + self.i, sticky=W)
+        self.label_nazwa.grid(row=6 + self.i, sticky=W)
         self.label_email.grid(row=6 + self.i, column=2)
         self.label_pass.grid(row=6 + self.i, column=4, sticky=E)
-        self.deleteButton.grid(row=6 + self.i, column=5, sticky=E)
+        self.button_usun.grid(row=6 + self.i, column=6, sticky=E, padx=2, pady=2)
 
-    def delete(self):
-        answer = tkinter.messagebox.askquestion('Usuń', 'Jesteś pewien, że chcesz usunąc konto??')
+    def usun(self):
+        czy_napewno = tkinter.messagebox.askquestion('Usuń', 'Jesteś pewien, że chcesz usunąc konto??')
 
-        if answer == 'yes':
-            for i in objects:
+        if czy_napewno == 'yes':
+            for i in cos:
                 i.destroy()
 
             f = open('emails.txt', 'r')
             lines = f.readlines()
             f.close()
-
             f = open('emails.txt', "w")
-            count = 0
-
+            licz = 0
             for line in lines:
-                if count != self.i:
+                if licz != self.i:
                     f.write(line)
-                    count += 1
-
+                    licz += 1
+                else:
+                    licz += 1
+                    continue
             f.close()
-            readfile()
+            wczytuje_plik()
 
     def destroy(self):
-        self.label_name.destroy()
+        self.label_nazwa.destroy()
         self.label_email.destroy()
         self.label_pass.destroy()
-        self.deleteButton.destroy()
+        self.button_usun.destroy()
 
 
 # ******* FUNCTIONS *********
 
 
-def onsubmit():
-    m = email.get()
-    p = password.get()
+def juz_dodane():
     n = name.get()
-    e = JuzDodawanie(window, n, p, m)
-    e.wypisz()
+    p = password.get()
+    e = email.get()
+    d = JuzDodawanie(window, n, p, e)
+    d.wypisz()
     name.delete(0, 'end')
     email.delete(0, 'end')
     password.delete(0, 'end')
-    messagebox.showinfo('Dodane Konto', 'Dodano z powodzeniem, \n' + 'Nazwa: ' + n + '\nEmail: ' + m + '\nPassy: ' + p)
-    readfile()
+    messagebox.showinfo('Dodawanie konta', 'Dane dodanego konta \n' + 'Nazwa: ' + n + '\nEmail: ' + e + '\nPassy: ' + p)
+    wczytuje_plik()
 
 
 def clearfile():
@@ -175,16 +175,16 @@ def clearfile():
     f.close()
 
 
-def readfile():
+def wczytuje_plik():
     f = open('emails.txt', 'r')
-    count = 0
+    zlicz = 0
 
     for line in f:
-        entity_list = line.split(',')
-        e = JuzDysponowanie(window, entity_list[0], entity_list[1], entity_list[2], count)
-        objects.append(e)
+        wejscie = line.split(',')
+        e = JuzDysponowanie(window, wejscie[0], wejscie[1], wejscie[2], zlicz)
+        cos.append(e)
         e.display()
-        count += 1
+        zlicz += 1
     f.close()
 
 
@@ -199,7 +199,7 @@ pass_label = Label(window, text='Passy: ', font=('Courier', 14))
 name = Entry(window, font=('Courier', 14))
 email = Entry(window, font=('Courier', 14))
 password = Entry(window, show='*', font=('Courier', 14))
-submit = Button(window, text='Dodaj Email', command=onsubmit, font=('Courier', 14))
+submit = Button(window, text='Dodaj Email', command=juz_dodane, font=('Courier', 14))
 
 entity_label.grid(columnspan=3, row=0)
 name_label.grid(row=1, sticky=E, padx=3)
@@ -230,7 +230,7 @@ pass_label2.grid(row=5, column=4)
 L1 = Label(window, text=' ')
 L1.grid(row=0, column=5, padx=2, pady=2, sticky=W)
 
-readfile()
+wczytuje_plik()
 
 window.mainloop()
 
