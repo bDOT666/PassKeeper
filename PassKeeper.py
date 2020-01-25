@@ -180,8 +180,8 @@ def readfile():
     count = 0
 
     for line in f:
-        entityList = line.split(',')
-        e = JuzDysponowanie(window, entityList[0], entityList[1], entityList[2], count)
+        entity_list = line.split(',')
+        e = JuzDysponowanie(window, entity_list[0], entity_list[1], entity_list[2], count)
         objects.append(e)
         e.display()
         count += 1
@@ -199,7 +199,7 @@ pass_label = Label(window, text='Passy: ', font=('Courier', 14))
 name = Entry(window, font=('Courier', 14))
 email = Entry(window, font=('Courier', 14))
 password = Entry(window, show='*', font=('Courier', 14))
-submit = Button(window, text='Add Email', command=onsubmit, font=('Courier', 14))
+submit = Button(window, text='Dodaj Email', command=onsubmit, font=('Courier', 14))
 
 entity_label.grid(columnspan=3, row=0)
 name_label.grid(row=1, sticky=E, padx=3)
@@ -228,8 +228,11 @@ email_label2.grid(row=5, column=2)
 pass_label2.grid(row=5, column=4)
 
 L1 = Label(window, text=' ')
-L1.grid( row=0, column=5, padx=2, pady=2, sticky=W)
+L1.grid(row=0, column=5, padx=2, pady=2, sticky=W)
 
 readfile()
 
 window.mainloop()
+
+
+

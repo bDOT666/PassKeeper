@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3de8be8c-7d90-4d1f-b8fd-b3129efbdb97" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/emails.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PassKeeper.py" beforeDir="false" afterPath="$PROJECT_DIR$/PassKeeper.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1579949758382</updated>
       <workItem from="1579949763765" duration="160000" />
-      <workItem from="1579970396260" duration="863000" />
+      <workItem from="1579970396260" duration="1267000" />
     </task>
     <servers />
   </component>
