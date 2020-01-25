@@ -62,6 +62,7 @@ class JuzDodawanie:
         wez_n = ""
         wez_e = ""
         wez_p = ""
+
         for letter in n:
             if letter == ' ':
                 wez_n += ' '
