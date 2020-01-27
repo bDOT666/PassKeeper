@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3de8be8c-7d90-4d1f-b8fd-b3129efbdb97" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kodowanie.py" beforeDir="false" afterPath="$PROJECT_DIR$/kodowanie.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +132,7 @@
       <workItem from="1579993820469" duration="123000" />
       <workItem from="1579994704950" duration="457000" />
       <workItem from="1580032118815" duration="45000" />
-      <workItem from="1580124075231" duration="2431000" />
+      <workItem from="1580124075231" duration="3328000" />
     </task>
     <servers />
   </component>
@@ -149,29 +148,29 @@
       <screen x="69" y="0" width="1851" height="1080" />
     </state>
     <state x="774" y="296" key="FileChooserDialogImpl/69.0.1851.1080@69.0.1851.1080" timestamp="1580032161485" />
-    <state width="1808" height="217" key="GridCell.Tab.0.bottom" timestamp="1580134374154">
+    <state width="1808" height="217" key="GridCell.Tab.0.bottom" timestamp="1580137284993">
       <screen x="69" y="0" width="1851" height="1080" />
     </state>
-    <state width="1808" height="217" key="GridCell.Tab.0.bottom/69.0.1851.1080@69.0.1851.1080" timestamp="1580134374154" />
-    <state width="1808" height="217" key="GridCell.Tab.0.center" timestamp="1580134374154">
+    <state width="1808" height="217" key="GridCell.Tab.0.bottom/69.0.1851.1080@69.0.1851.1080" timestamp="1580137284993" />
+    <state width="1808" height="217" key="GridCell.Tab.0.center" timestamp="1580137284993">
       <screen x="69" y="0" width="1851" height="1080" />
     </state>
-    <state width="1808" height="217" key="GridCell.Tab.0.center/69.0.1851.1080@69.0.1851.1080" timestamp="1580134374154" />
-    <state width="1808" height="217" key="GridCell.Tab.0.left" timestamp="1580134374154">
+    <state width="1808" height="217" key="GridCell.Tab.0.center/69.0.1851.1080@69.0.1851.1080" timestamp="1580137284993" />
+    <state width="1808" height="217" key="GridCell.Tab.0.left" timestamp="1580137284993">
       <screen x="69" y="0" width="1851" height="1080" />
     </state>
-    <state width="1808" height="217" key="GridCell.Tab.0.left/69.0.1851.1080@69.0.1851.1080" timestamp="1580134374154" />
-    <state width="1808" height="217" key="GridCell.Tab.0.right" timestamp="1580134374154">
+    <state width="1808" height="217" key="GridCell.Tab.0.left/69.0.1851.1080@69.0.1851.1080" timestamp="1580137284993" />
+    <state width="1808" height="217" key="GridCell.Tab.0.right" timestamp="1580137284993">
       <screen x="69" y="0" width="1851" height="1080" />
     </state>
-    <state width="1808" height="217" key="GridCell.Tab.0.right/69.0.1851.1080@69.0.1851.1080" timestamp="1580134374154" />
+    <state width="1808" height="217" key="GridCell.Tab.0.right/69.0.1851.1080@69.0.1851.1080" timestamp="1580137284993" />
     <state x="657" y="235" key="search.everywhere.popup" timestamp="1579978659852">
       <screen x="69" y="0" width="1851" height="1080" />
     </state>
     <state x="657" y="235" key="search.everywhere.popup/69.0.1851.1080@69.0.1851.1080" timestamp="1579978659852" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PassKeeper$kodowanie.coverage" NAME="kodowanie Coverage Results" MODIFIED="1580134374146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PassKeeper$kodowanie.coverage" NAME="kodowanie Coverage Results" MODIFIED="1580137284973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PassKeeper$proba.coverage" NAME="proba Coverage Results" MODIFIED="1579975631589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PassKeeper$PassKeeper.coverage" NAME="PassKeeper Coverage Results" MODIFIED="1580032129322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
