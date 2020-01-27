@@ -4,6 +4,12 @@ p = 'Wiktoria Płaszczyk'
 
 wez_p = [ord(c) for c in p]
 
+print(wez_p)
+
+"""
+Ascii na liczbe
+"""
+
 for i in range(len(wez_p)):
     if wez_p[i] < 10:
         wez_p[i] = str(wez_p[i])
@@ -15,13 +21,21 @@ for i in range(len(wez_p)):
 a = ''.join(map(str, wez_p))
 print(a)
 
+"""
+KODOWANIE
+"""
 
 
 
+"""
+ODKODOWANIE
+"""
 
 
 
-
+"""
+liczba na Ascii
+"""
 
 b = []
 for i in range(0, len(a), 3):
@@ -29,8 +43,8 @@ for i in range(0, len(a), 3):
     b.append(int(a[i:i + 3]))
 print(b)
 
-pmsg = ''.join(chr(i) for i in b)
-print(pmsg)
+daj_p = ''.join(chr(i) for i in b)
+print(daj_p)
 
 
 
