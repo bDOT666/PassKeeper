@@ -12,18 +12,25 @@ for i in range(len(wez_p)):
         wez_p[i] = str(wez_p[i])
         wez_p[i] = '0' + wez_p[i]
 
-a= ''.join(map(str, wez_p))
+a = ''.join(map(str, wez_p))
 print(a)
 
 
 
-def GetIntegerSlice(i, n, m):
-  # return nth to mth digit of i (as int)
-  l = math.floor(math.log10(i)) + 1
-  return i / int(pow(10, l - m)) % int(pow(10, m - n + 1))
 
 
 
+
+
+
+b = []
+for i in range(0, len(a), 3):
+    c = a[i:i + 3]
+    b.append(int(a[i:i + 3]))
+print(b)
+
+pmsg = ''.join(chr(i) for i in b)
+print(pmsg)
 
 
 
