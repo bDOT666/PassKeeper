@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3de8be8c-7d90-4d1f-b8fd-b3129efbdb97" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/kodowanie.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PassKeeper.py" beforeDir="false" afterPath="$PROJECT_DIR$/PassKeeper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kodowanie.py" beforeDir="false" afterPath="$PROJECT_DIR$/kodowanie.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +131,9 @@
       <workItem from="1579949763765" duration="160000" />
       <workItem from="1579970396260" duration="6437000" />
       <workItem from="1579993820469" duration="123000" />
-      <workItem from="1579994704950" duration="267000" />
+      <workItem from="1579994704950" duration="457000" />
+      <workItem from="1580032118815" duration="45000" />
+      <workItem from="1580124075231" duration="946000" />
     </task>
     <servers />
   </component>
@@ -144,34 +145,34 @@
       <screen x="69" y="0" width="1851" height="1080" />
     </state>
     <state x="724" y="288" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/69.0.1851.1080@69.0.1851.1080" timestamp="1579975678970" />
-    <state x="774" y="296" key="FileChooserDialogImpl" timestamp="1579993860068">
+    <state x="774" y="296" key="FileChooserDialogImpl" timestamp="1580032161485">
       <screen x="69" y="0" width="1851" height="1080" />
     </state>
-    <state x="774" y="296" key="FileChooserDialogImpl/69.0.1851.1080@69.0.1851.1080" timestamp="1579993860068" />
-    <state width="1808" height="217" key="GridCell.Tab.0.bottom" timestamp="1579995047123">
+    <state x="774" y="296" key="FileChooserDialogImpl/69.0.1851.1080@69.0.1851.1080" timestamp="1580032161485" />
+    <state width="1808" height="217" key="GridCell.Tab.0.bottom" timestamp="1580126685343">
       <screen x="69" y="0" width="1851" height="1080" />
     </state>
-    <state width="1808" height="217" key="GridCell.Tab.0.bottom/69.0.1851.1080@69.0.1851.1080" timestamp="1579995047123" />
-    <state width="1808" height="217" key="GridCell.Tab.0.center" timestamp="1579995047123">
+    <state width="1808" height="217" key="GridCell.Tab.0.bottom/69.0.1851.1080@69.0.1851.1080" timestamp="1580126685343" />
+    <state width="1808" height="217" key="GridCell.Tab.0.center" timestamp="1580126685343">
       <screen x="69" y="0" width="1851" height="1080" />
     </state>
-    <state width="1808" height="217" key="GridCell.Tab.0.center/69.0.1851.1080@69.0.1851.1080" timestamp="1579995047123" />
-    <state width="1808" height="217" key="GridCell.Tab.0.left" timestamp="1579995047123">
+    <state width="1808" height="217" key="GridCell.Tab.0.center/69.0.1851.1080@69.0.1851.1080" timestamp="1580126685343" />
+    <state width="1808" height="217" key="GridCell.Tab.0.left" timestamp="1580126685343">
       <screen x="69" y="0" width="1851" height="1080" />
     </state>
-    <state width="1808" height="217" key="GridCell.Tab.0.left/69.0.1851.1080@69.0.1851.1080" timestamp="1579995047123" />
-    <state width="1808" height="217" key="GridCell.Tab.0.right" timestamp="1579995047123">
+    <state width="1808" height="217" key="GridCell.Tab.0.left/69.0.1851.1080@69.0.1851.1080" timestamp="1580126685343" />
+    <state width="1808" height="217" key="GridCell.Tab.0.right" timestamp="1580126685343">
       <screen x="69" y="0" width="1851" height="1080" />
     </state>
-    <state width="1808" height="217" key="GridCell.Tab.0.right/69.0.1851.1080@69.0.1851.1080" timestamp="1579995047123" />
+    <state width="1808" height="217" key="GridCell.Tab.0.right/69.0.1851.1080@69.0.1851.1080" timestamp="1580126685343" />
     <state x="657" y="235" key="search.everywhere.popup" timestamp="1579978659852">
       <screen x="69" y="0" width="1851" height="1080" />
     </state>
     <state x="657" y="235" key="search.everywhere.popup/69.0.1851.1080@69.0.1851.1080" timestamp="1579978659852" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PassKeeper$kodowanie.coverage" NAME="kodowanie Coverage Results" MODIFIED="1579995047099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PassKeeper$kodowanie.coverage" NAME="kodowanie Coverage Results" MODIFIED="1580126685335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/PassKeeper$proba.coverage" NAME="proba Coverage Results" MODIFIED="1579975631589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/PassKeeper$PassKeeper.coverage" NAME="PassKeeper Coverage Results" MODIFIED="1579979227705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PassKeeper$PassKeeper.coverage" NAME="PassKeeper Coverage Results" MODIFIED="1580032129322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
