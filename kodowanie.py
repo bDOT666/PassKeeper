@@ -1,4 +1,4 @@
-
+import math
 
 p = 'Wiktoria Płaszczyk'
 
@@ -12,15 +12,15 @@ for i in range(len(wez_p)):
         wez_p[i] = str(wez_p[i])
         wez_p[i] = '0' + wez_p[i]
 
-print(''.join(map(str, wez_p)))
+a= ''.join(map(str, wez_p))
+print(a)
 
 
 
-
-
-
-
-
+def GetIntegerSlice(i, n, m):
+  # return nth to mth digit of i (as int)
+  l = math.floor(math.log10(i)) + 1
+  return i / int(pow(10, l - m)) % int(pow(10, m - n + 1))
 
 
 
