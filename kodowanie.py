@@ -1,7 +1,7 @@
 import math
 
 p = 'Wiktoria Płaszczyk'
-
+print(p)
 wez_p = [ord(c) for c in p]
 
 print(wez_p)
@@ -24,6 +24,11 @@ print(a)
 """
 KODOWANIE
 """
+float(a)
+
+a1 = a * 13412
+print(a1)
+
 
 
 
@@ -31,7 +36,8 @@ KODOWANIE
 ODKODOWANIE
 """
 
-
+a2 = 1/13412
+print(a2)
 
 """
 liczba na Ascii
