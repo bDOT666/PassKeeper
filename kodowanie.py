@@ -32,9 +32,15 @@ print(a1)
 
 
 
+
+
+
 """
 ODKODOWANIE
 """
+
+
+
 
 a2 = 1/13412
 print(a2)
@@ -51,19 +57,6 @@ print(b)
 
 daj_p = ''.join(chr(i) for i in b)
 print(daj_p)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

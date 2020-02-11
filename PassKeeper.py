@@ -1,3 +1,4 @@
+import subprocess
 import tkinter
 from tkinter import *
 from tkinter import messagebox
@@ -117,14 +118,18 @@ class JuzDysponowanie:
 
         self.label_nazwa = Label(self.window, text=daj_n, font=('Courier', 14))
         self.label_email = Label(self.window, text=daj_e, font=('Courier', 14))
-        self.label_pass = Label(self.window, text=daj_p, font=('Courier', 14))
+        self.button_pass = Button(self.window, text=daj_p, font=('Courier', 12), command=lambda: self.kopjuj(daj_p))
         self.button_usun = Button(self.window, text='X', fg='red', command=self.usun)
 
     def display(self):
         self.label_nazwa.grid(row=6 + self.i, sticky=W)
         self.label_email.grid(row=6 + self.i, column=2)
-        self.label_pass.grid(row=6 + self.i, column=4, sticky=E)
+        self.button_pass.grid(row=6 + self.i, column=4, sticky=E)
         self.button_usun.grid(row=6 + self.i, column=6, sticky=E, padx=2, pady=2)
+
+    def kopjuj(self, dane):
+        kopjowane = 'echo ' + dane.strip() + '|clip'
+        return subprocess.check_call(kopjowane, shell=True)
 
     def usun(self):
         czy_napewno = tkinter.messagebox.askquestion('Usuń', 'Jesteś pewien, że chcesz usunąc konto??')
@@ -151,7 +156,7 @@ class JuzDysponowanie:
     def destroy(self):
         self.label_nazwa.destroy()
         self.label_email.destroy()
-        self.label_pass.destroy()
+        self.button_pass.destroy()
         self.button_usun.destroy()
 
 
