@@ -17,24 +17,26 @@ class Logowanie(object):
 
     loop = False
     attempts = 0
+    haslo = 'okoń'
 
     def __init__(self, master):
         top = self.top = Toplevel(master)
         top.title('loguj!')
-        top.geometry('{}x{}'.format(270, 105))
+        top.geometry('{}x{}'.format(270, 155))
         top.resizable(width=False, height=False)
         self.l_1 = Label(top, text="DAWAJ HASŁO KMIOCIE!!!!", font=('Courier', 14), justify=CENTER)
-        self.l_1.pack()
+        self.l_1.pack(pady=3)
         self.entry = Entry(top, show='*', width=30)
-        self.entry.pack(pady=7)
+        self.entry.pack(pady=3)
         self.b_1 = Button(top, text='Zaloguj', command=self.wejdz, font=('Courier', 14))
-        self.b_1.pack()
+        self.b_1.pack(pady=3)
+        self.b_2 = Button(top, text='Zapomniałem hasła', command=self.wejdz, font=('Courier', 14))
+        self.b_2.pack(pady=3)
 
     def wejdz(self):
         self.value = self.entry.get()
-        haslo = 'okoń'
 
-        if self.value == haslo:
+        if self.value == self.haslo:
             self.loop = True
             self.top.destroy()
             window.deiconify()
@@ -44,6 +46,9 @@ class Logowanie(object):
                 window.quit()
             self.entry .delete(0, 'end')
             messagebox.showerror('Złe hasło!', 'Złe mówię! Mało szans pozostało Ci, bo: ' + str(5 - self.attempts))
+
+    def zapomnialem(self):
+        messagebox.showerror('Ojoj... biedactwo...\nTRZEBA BYŁO MYŚLE WCZEŚNIEJ!!!')
 
 
 class JuzDodawanie:

@@ -61,6 +61,33 @@ print(daj_p)
 
 
 
+import tkinter as tk
+
+
+class Yes:
+    a = 1
+    def __init__(self):
+        pass
+
+    def yes(self):
+        if Yes.a==1:
+            print("Yes")
+        else:
+            print("No, but yes")
+
+class No(Yes):
+
+    def no(self):
+        if Yes.a==1:
+            print("No")
+        else:
+            print("Yes, but no")
+        Yes.a-=1 #Note this line
+
+Yes().yes()
+No().no()
+Yes().yes()
+No().no()
 
 
 
