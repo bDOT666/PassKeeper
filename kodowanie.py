@@ -1,37 +1,9 @@
+
+
 import math
 
-p = 'Wiktoria Płaszczyk'
-print(p)
-wez_p = [ord(c) for c in p]
 
-print(wez_p)
-
-"""
-Ascii na liczbe
-"""
-
-for i in range(len(wez_p)):
-    if wez_p[i] < 10:
-        wez_p[i] = str(wez_p[i])
-        wez_p[i] = '00' + str(wez_p[i])
-    if wez_p[i] <100:
-        wez_p[i] = str(wez_p[i])
-        wez_p[i] = '0' + str(wez_p[i])
-
-a = ''.join(map(str, wez_p))
-print(a)
-
-
-b = []
-for i in range(0, len(a), 3):
-    b.append(int(a[i:i + 3]))
-print(b)
-
-daj_p = ''.join(chr(i) for i in b)
-print(daj_p)
-
-
-class KodowanieOdkodowania:
+class AskiiNieAskii:
     key = 0
 
     def __init__(self):
@@ -41,73 +13,54 @@ class KodowanieOdkodowania:
     def tekst_na_askii(self, tekst):
         self.wez_p = [ord(c) for c in tekst]
         for i in range(len(self.wez_p)):
-            if wez_p[i] < 10:
+            if self.wez_p[i] < 10:
                 self.wez_p[i] = str(self.wez_p[i])
                 self.wez_p[i] = '00' + str(self.wez_p[i])
             if self.wez_p[i] < 100:
-                self.wez_p[i] = str(wez_p[i])
+                self.wez_p[i] = str(self.wez_p[i])
                 self.wez_p[i] = '0' + str(self.wez_p[i])
 
-        return int(''.join(map(str, self.wez_p)))
+        kod = ''.join(map(str, self.wez_p))
+        self.wez_p.clear()
+        return kod
 
     def aski_na_tekst(self, liczba):
         for i in range(0, len(liczba), 3):
             self.daj_p.append(int(liczba[i:i + 3]))
-
-        return ''.join(chr(i) for i in b)
-
-
-
+        tekst = ''.join(chr(i) for i in self.daj_p)
+        self.daj_p.clear()
+        return tekst
 
 
+class KodujOdkoduj(AskiiNieAskii):
+    a = AskiiNieAskii()
+
+    def koduj(self, tekst):
+        askii = a.tekst_na_askii(tekst)
+
+        kod = askii
+        return kod
+
+    def odkodowanie(self, kod):
+        wynik = kod
+
+        tekst = a.aski_na_tekst(wynik)
+        return tekst
 
 
+p = 'Wiktoria Płaszczyk'
 
+a = AskiiNieAskii()
+aa = KodujOdkoduj()
 
+b = a.tekst_na_askii(p)
+c = a.aski_na_tekst(b)
+bb = aa.koduj(p)
+cc = aa.odkodowanie(bb)
 
-
-
-
-
-
-
-class Yes:
-    a = 1
-
-    def __init__(self):
-        pass
-
-    def yes(self):
-        if Yes.a==1:
-            print("Yes")
-        else:
-            print("No, but yes")
-
-
-class No(Yes):
-
-    def no(self):
-        if Yes.a == 1:
-            print("No")
-        else:
-            print("Yes, but no")
-        Yes.a -= 1 #Note this line
-
-
-Yes().yes()
-No().no()
-Yes().yes()
-No().no()
-
-
-
-
-
-
-
-
-
-
-
+print(b)
+print(c)
+print(bb)
+print(cc)
 
 
