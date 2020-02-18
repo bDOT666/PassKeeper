@@ -4,7 +4,6 @@ import math
 
 
 class AskiiNieAskii:
-    key = 0
 
     def __init__(self):
         self.wez_p = []
@@ -33,6 +32,7 @@ class AskiiNieAskii:
 
 
 class KodujOdkoduj(AskiiNieAskii):
+    key = 0
     a = AskiiNieAskii()
 
     def koduj(self, tekst):
