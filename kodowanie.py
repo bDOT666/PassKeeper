@@ -1,7 +1,8 @@
 
 
 def aaaaa():
-    a=1
+    pass
+
 
 class AskiiNieAskii:
 
