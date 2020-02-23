@@ -1,13 +1,14 @@
 
 
-import math
-
+def aaaaa():
+    a=1
 
 class AskiiNieAskii:
 
     def __init__(self):
         self.wez_p = []
         self.daj_p = []
+        self.key = 0
 
     def tekst_na_askii(self, tekst):
         self.wez_p = [ord(c) for c in tekst]
@@ -30,13 +31,10 @@ class AskiiNieAskii:
         self.daj_p.clear()
         return tekst
 
-
-class KodujOdkoduj(AskiiNieAskii):
-    key = 0
-    a = AskiiNieAskii()
+    # Obrubka danych zankońcozna, można kodować(Y)
 
     def koduj(self, tekst):
-        askii = a.tekst_na_askii(tekst)
+        askii = self.tekst_na_askii(tekst)
 
         kod = askii
         return kod
@@ -44,23 +42,19 @@ class KodujOdkoduj(AskiiNieAskii):
     def odkodowanie(self, kod):
         wynik = kod
 
-        tekst = a.aski_na_tekst(wynik)
+        tekst = self.aski_na_tekst(wynik)
         return tekst
 
 
 p = 'Wiktoria Płaszczyk'
 
 a = AskiiNieAskii()
-aa = KodujOdkoduj()
 
-b = a.tekst_na_askii(p)
-c = a.aski_na_tekst(b)
-bb = aa.koduj(p)
-cc = aa.odkodowanie(bb)
+b = a.koduj(p)
+c = a.odkodowanie(b)
 
+print(p)
 print(b)
 print(c)
-print(bb)
-print(cc)
 
 

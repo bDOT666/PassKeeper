@@ -1,3 +1,4 @@
+
 import subprocess
 import tkinter
 from tkinter import *
@@ -30,7 +31,7 @@ class Logowanie(object):
         self.entry.pack(pady=3)
         self.b_1 = Button(top, text='Zaloguj', command=self.wejdz, font=('Courier', 14))
         self.b_1.pack(pady=3)
-        self.b_2 = Button(top, text='Zapomniałem hasła', command=self.zapomnialem, font=('Courier', 14))
+        self.b_2 = Button(top, text='Zapomniałem hasła', command=self.wejdz, font=('Courier', 14))
         self.b_2.pack(pady=3)
 
     def wejdz(self):
@@ -48,16 +49,39 @@ class Logowanie(object):
             messagebox.showerror('Złe hasło!', 'Złe mówię! Mało szans pozostało Ci, bo: ' + str(5 - self.attempts))
 
     def zapomnialem(self):
-        messagebox.showerror('Zapomniałeś? Ojoj...', 'Ojoj... biedactwo...\nTRZEBA BYŁO PAMIĘTA, KARTOFLU!!!')
+        messagebox.showerror('Ojoj... biedactwo...\nTRZEBA BYŁO MYŚLE WCZEŚNIEJ!!!')
 
 
-class JuzDodawanie:
+class KodujOdkoduj:
+
+    key = 5
 
     def __init__(self, master, n, p, e):
+
         self.password = p
         self.name = n
         self.email = e
         self.window = master
+
+    def koduj(self, ile):
+        w_co = ""
+        for letter in ile:
+            if letter == ' ':
+                w_co += ' '
+            else:
+                w_co += chr(ord(letter) + self.key)
+        return w_co
+
+    def odkoduj(self, ile):
+        w_co = ""
+        for letter in ile:
+            if letter == ' ':
+                w_co += ' '
+            else:
+                w_co += chr(ord(letter) - self.key)
+        return w_co
+
+class JuzDodawanie(KodujOdkoduj):
 
     def wypisz(self):
         f = open('emails.txt', "a")
@@ -65,33 +89,16 @@ class JuzDodawanie:
         e = self.email
         p = self.password
 
-        wez_n = ""
-        wez_e = ""
-        wez_p = ""
-
-        for letter in n:
-            if letter == ' ':
-                wez_n += ' '
-            else:
-                wez_n += chr(ord(letter) + 5)
-
-        for letter in e:
-            if letter == ' ':
-                wez_e += ' '
-            else:
-                wez_e += chr(ord(letter) + 5)
-
-        for letter in p:
-            if letter == ' ':
-                wez_p += ' '
-            else:
-                wez_p += chr(ord(letter) + 5)
+        wez_n = self.koduj(n)
+        wez_e = self.koduj(e)
+        wez_p = self.koduj(p)
 
         f.write(wez_n + ',' + wez_e + ',' + wez_p + ', \n')
         f.close()
 
 
 class JuzDysponowanie:
+
 
     def __init__(self, master, n, e, p, i):
         self.password = p
@@ -100,26 +107,11 @@ class JuzDysponowanie:
         self.window = master
         self.i = i
 
-        daj_n = ""
-        daj_e = ""
-        daj_p = ""
-        for letter in self.name:
-            if letter == ' ':
-                daj_n += ' '
-            else:
-                daj_n += chr(ord(letter) - 5)
+        a = KodujOdkoduj()
 
-        for letter in self.email:
-            if letter == ' ':
-                daj_e += ' '
-            else:
-                daj_e += chr(ord(letter) - 5)
-
-        for letter in self.password:
-            if letter == ' ':
-                daj_p += ' '
-            else:
-                daj_p += chr(ord(letter) - 5)
+        daj_n = a.odkoduj(self.name)
+        daj_e = a.odkoduj(self.email)
+        daj_p = a.odkoduj(self.password)
 
         self.label_nazwa = Label(self.window, text=daj_n, font=('Courier', 14))
         self.label_email = Label(self.window, text=daj_e, font=('Courier', 14))
