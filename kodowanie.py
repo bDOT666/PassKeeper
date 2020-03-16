@@ -1,9 +1,5 @@
 
 
-def aaaaa():
-    pass
-
-
 class AskiiNieAskii:
 
     def __init__(self):
